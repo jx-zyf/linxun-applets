@@ -1,0 +1,12 @@
+<linxun-userinfo bind:userinfoChange="userinfoChange">
+  <view class="userinfo flex-box">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="my-input">
+    <linxun-idcard-input rule="{{idcardRule}}" bind:idcardChange="onComponentChange" data-field="idcard"></linxun-idcard-input>
+  </view>
+  <view class="submit">
+    <button bindtap="submit">提交</button>
+  </view>
+</linxun-userinfo>

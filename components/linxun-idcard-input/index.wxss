@@ -1,0 +1,59 @@
+/* components/linxun-idcard-input/index.wxss */
+.linxun-input-box {
+  display: flex;
+  margin: 32rpx 16rpx 16rpx 16rpx;
+  padding: 12rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.linxun-upload {
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.linxun-input-label {
+  height: 100%;
+  flex: 3;
+}
+
+.linxun-right {
+  height: 100%;
+  flex: 5;
+  display: flex;
+  align-items: center;
+}
+
+.linxun-input {
+  flex: 6;
+}
+
+.linxun-img-box {
+  flex: 1;
+  text-align:right;
+  display: flex;
+  align-items: center;
+}
+
+.linxun-img-box-img {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.linxun-red {
+  color: red;
+}
+
+.linxun-placeholder {
+  visibility: hidden;
+}
+
+.linxun-error-msg {
+  text-align: center;
+  color: red;
+  margin-bottom: 16rpx;
+  font-size: 28rpx;
+}

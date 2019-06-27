@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+@import 'style/linxun-input.wxss';
+
+page {
+  --primaryColor: #1296db;
+}

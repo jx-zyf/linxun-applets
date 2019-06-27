@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "linxun-userinfo": "../../components/linxun-userinfo/index",
+    "linxun-idcard-input": "../../components/linxun-idcard-input/index"
+  }
+}

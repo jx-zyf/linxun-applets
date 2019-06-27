@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="authFail">
+    <image src="./images/authFail.png"></image>
+  </view>
+  <view>
+    <button bindtap="toAuthorize" class="save-btn">重新授权</button>
+  </view>
+</view>
