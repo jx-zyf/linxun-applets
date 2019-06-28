@@ -1,0 +1,69 @@
+
+.linxun-input-box {
+  display: flex;
+  margin: 32rpx 16rpx 44rpx 16rpx;
+  padding: 12rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.linxun-upload {
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.linxun-input-label {
+  height: 100%;
+  flex: 3;
+}
+
+.linxun-right {
+  height: 100%;
+  flex: 6;
+  display: flex;
+  align-items: center;
+}
+
+.linxun-input {
+  flex: 6;
+}
+
+.linxun-img-box {
+  flex: 1;
+  text-align:right;
+  display: flex;
+  align-items: center;
+}
+
+.linxun-get-phone {
+  flex: 2;
+  margin-top: 0;
+  padding: 0 16rpx !important;
+}
+
+.linxun-img-box-img {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.linxun-red {
+  color: red;
+}
+
+.linxun-placeholder {
+  visibility: hidden;
+}
+
+.linxun-error-msg {
+  position: absolute;
+  top: 100%;
+  left: 33.4%;
+  width: 100%;
+  color: red;
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}

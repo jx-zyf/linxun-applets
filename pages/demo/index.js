@@ -8,8 +8,17 @@ Page({
     idcardRule: {
       required: true,                             // 是否必填
       useImg: true,                               // 是否使用图片识别
-      uploadImgUrl: '/api/upload/identifyNo',      // 身份证上传url
+      uploadImgUrl: '/api/upload/identifyNo',     // 身份证上传url
       uploadName: 'identify_card',                // 身份证上传name参数
+    },
+    phoneRule: {
+      required: true,                             // 是否必填
+      useButton: true,                            // 是否可以自动获取
+      getPhoneUrl: '/api/wx/decryptPhone',        // 获取手机号url
+    },
+    commonRule: {
+      label: '名称',
+      required: true,
     }
   },
 

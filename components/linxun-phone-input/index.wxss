@@ -1,0 +1,3 @@
+/* components/linxun-phone-input/index.wxss */
+
+@import '../style/linxun-component.wxss';

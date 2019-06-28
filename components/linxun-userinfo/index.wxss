@@ -10,4 +10,11 @@
 
 .auth>.weui-btn {
   margin-top: 24rpx;
+  background-color: var(--primaryColor);
+  color: #fff;
+  line-height: 2.4;
+}
+
+.auth>.weui-btn:hover {
+  opacity: 0.8;
 }

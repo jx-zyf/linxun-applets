@@ -1,9 +1,7 @@
 // components/linxun-idcard-input/index.js
 const constant = require('../../utils/constant');
-const {
-  BASEURL,
-  IMGMOSESIZE
-} = constant;
+const { BASEURL, IMGMOSESIZE } = constant;
+const { CARD_REG } = require('../utils/reg.js');
 
 Component({
   /**
@@ -17,7 +15,15 @@ Component({
         useImg: false, // 是否使用图片识别
         uploadImgUrl: undefined, // 身份证上传url
         uploadName: undefined, // 身份证上传name参数
-      }
+      },
+      observer: function (newValue, oldValue) {
+        if (newValue.useImg && !newValue.uploadImgUrl) {
+          console.error('linxun-idcard-input提示：uploadImgUrl 未传入！');
+        }
+        if (newValue.useImg && !newValue.uploadName) {
+          console.error('linxun-idcard-input提示：uploadName 未传入！');
+        }
+      },
     }
   },
 
@@ -42,80 +48,66 @@ Component({
     },
 
     _onInputBlur: function(e) {
-      const {
-        required
-      } = this.data.rule;
+      const { required } = this.data.rule;
       const value = e.detail.value;
-      if (required && !value) {
+      this.setData({
+        errorMsg: required && !value ? '身份证是必填项' : '',
+      });
+      if (value) {
         this.setData({
-          errorMsg: '身份证是必填项',
-        })
-      } else {
-        this.setData({
-          errorMsg: '',
-        })
+          errorMsg: !CARD_REG.test(value) ? '身份证格式有误' : '',
+        });
       }
     },
 
-    _chooseImage: function() {
-      const {
-        useImg,
-        uploadImgUrl,
-        uploadName
-      } = this.data.rule;
-      if (useImg && uploadImgUrl && uploadName) {
-        wx.chooseImage({
-          count: 1,
-          sizeType: ['compressed'],
-          success: (res) => {
-            if (res.errMsg === 'chooseImage:ok') {
-              const filePath = res.tempFilePaths[0];
-              if (IMGMOSESIZE) {
-                const tempFile = res.tempFiles[0];
-                if (tempFile.size > IMGMOSESIZE * 1024 * 1000) {
-                  utils.showMsg(`您的图片超过${IMGMOSESIZE}M，请重新选择`);
-                  return;
+    _chooseImage: function () {
+      wx.chooseImage({
+        count: 1,
+        sizeType: ['compressed'],
+        success: (res) => {
+          if (res.errMsg === 'chooseImage:ok') {
+            const { uploadImgUrl, uploadName } = this.data.rule;
+            const filePath = res.tempFilePaths[0];
+            if (IMGMOSESIZE) {
+              const tempFile = res.tempFiles[0];
+              if (tempFile.size > IMGMOSESIZE * 1024 * 1000) {
+                utils.showMsg(`您的图片超过${IMGMOSESIZE}M，请重新选择`);
+                return;
+              }
+            }
+            wx.showLoading({
+              title: '上传中...',
+            })
+            wx.uploadFile({
+              url: `${BASEURL}${uploadImgUrl}`,
+              filePath,
+              name: uploadName,
+              success: uploadRes => {
+                const data = JSON.parse(uploadRes.data);
+                if (data && data.success) {
+                  this.setData({
+                    idCard: data.result.identify_no,
+                    errorMsg: '',
+                  })
+                  this.triggerEvent('idcardChange', data.result.identify_no);
+                  wx.hideLoading();
+                } else {
+                  wx.hideLoading();
+                  wx.showToast({
+                    title: data.errMsg || '上传失败！请重试',
+                    icon: 'none',
+                  })
                 }
               }
-              wx.showLoading({
-                title: '上传中...',
-              })
-              wx.uploadFile({
-                url: `${BASEURL}${uploadImgUrl}`,
-                filePath,
-                name: uploadName,
-                success: uploadRes => {
-                  const data = JSON.parse(uploadRes.data);
-                  if (data && data.success) {
-                    this.setData({
-                      idCard: data.result.identify_no,
-                      errorMsg: '',
-                    })
-                    this.triggerEvent('idcardChange', data.result.identify_no);
-                    wx.hideLoading();
-                  } else {
-                    wx.hideLoading();
-                    wx.showToast({
-                      title: data.errMsg || '上传失败！请重试',
-                      icon: 'none',
-                    })
-                  }
-                }
-              })
-            } else {
-              wx.showToast({
-                title: '请重新选择',
-                icon: 'none',
-              })
-            }
-          },
-        })
-      } else {
-        wx.showToast({
-          title: 'uploadImgUrl 或 uploadName未传入',
-          icon: 'none',
-        })
-      }
+            })
+          } else {
+            wx.showToast({
+              title: '请重新选择',
+              icon: 'none',
+            })
+          }
+        },
+      })
     },
   }
 })

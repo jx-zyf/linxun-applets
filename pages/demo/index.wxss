@@ -1,3 +1,7 @@
+.container {
+  padding-bottom: 32rpx;
+}
+
 .userinfo {
   margin-bottom: 50rpx;
 }
@@ -21,7 +25,7 @@
 }
 
 .submit {
-  margin: 32rpx;
+  margin: 60rpx 32rpx;
 }
 
 .submit>button {

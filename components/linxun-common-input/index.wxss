@@ -1,0 +1,3 @@
+/* components/linxun-common-input/index.wxss */
+
+@import '../style/linxun-component.wxss';

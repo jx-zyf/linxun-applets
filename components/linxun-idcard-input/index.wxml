@@ -8,5 +8,5 @@
       <image class="linxun-img-box-img" src="./images/camera.png" bindtap="_chooseImage"></image>
     </view>
   </view>
+  <view class="linxun-error-msg">{{errorMsg}}</view>
 </view>
-<view class="linxun-error-msg">{{errorMsg}}</view>
