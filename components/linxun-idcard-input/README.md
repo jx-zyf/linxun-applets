@@ -6,7 +6,7 @@
 
 #### use
 ```
-在需要使用身份证输入框的地方使用<code><linxun-idcard-input></linxun-idcard-input></code>即可
+在需要使用身份证输入框的地方使用<linxun-idcard-input></linxun-idcard-input>即可
 ```
 
 所需参数

@@ -6,7 +6,7 @@
 
 #### use
 ```
-在需要使用输入框的地方使用<code><linxun-common-input></linxun-common-input></code>即可
+在需要使用输入框的地方使用<linxun-common-input></linxun-common-input>即可
 ```
 
 所需参数
