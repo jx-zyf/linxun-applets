@@ -6,7 +6,9 @@
 
 #### use
 
+```
 在需要用户信息的page外层套上<linxun-userinfo></linxun-userinfo>即可，前提是需要在页面配置文件加上改该组件的引用
+```
 
 所需参数
 
