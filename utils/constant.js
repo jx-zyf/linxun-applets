@@ -1,8 +1,7 @@
 // 常量文件
-// const BASEURL = 'https://your.origin';
-const BASEURL = 'https://ysbb.yysecurity.cn'
+const BASEURL = 'https://your.origin'
 
-const UPLOAD_URL = 'https://data.ysbb.yysecurity.cn'
+const UPLOAD_URL = 'https://your.data.origin'
 
 const IMGMOSESIZE = 10;  // 上传图片最大尺寸 单位：M
 
