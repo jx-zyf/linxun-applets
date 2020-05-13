@@ -1,0 +1,28 @@
+/* components/linxun-idcard-input/index.wxss */
+
+@import '../style/linxun-component.wxss';
+
+.linxun-picker {
+  display: inline-block;
+  width: 100%;
+}
+
+.textPlaceholder {
+  color: #777;
+}
+
+.linxun-picker text {
+  float: right;
+  color: #13c2c2;
+}
+
+.linxun-img-box {
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.linxun-img-box-img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,20 @@
+/* components/linxun-phone-input/index.wxss */
+
+@import '../style/linxun-component.wxss';
+
+.linxun-get-phone {
+  flex: 2;
+  margin-top: 0;
+  padding: 0 12rpx !important;
+}
+
+.weui-btn_primary {
+  background-color: var(--weui-BRAND);
+  outline: none;
+  border: none;
+}
+
+.weui-btn_primary:hover {
+  background-color: var(--weui-BRAND);
+  opacity: 0.8;
+}

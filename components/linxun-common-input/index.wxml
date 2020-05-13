@@ -1,9 +1,0 @@
-<!--components/linxun-common-input/index.wxml-->
-<view class="linxun-input-box">
-  <label class="linxun-input-label">
-    <text class="{{required ? 'linxun-red' : 'linxun-placeholder'}}">*</text> {{label}}</label>
-  <view class="linxun-right">
-    <input class="linxun-input" type="{{type}}" placeholder="请输入{{label}}" bindinput="_onInputChange" bindblur="_onInputBlur" maxlength="{{max}}" value="{{inputVal}}"></input>
-  </view>
-  <view class="linxun-error-msg">{{errorMsg}}</view>
-</view>

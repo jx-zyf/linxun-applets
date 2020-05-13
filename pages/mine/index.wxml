@@ -1,0 +1,39 @@
+<!--pages/mine/index.wxml-->
+<view class="header">
+  <block wx:if="{{userInfo.nickName}}">
+    <view class="img">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="welcome">
+      <view class="name">Hi，{{userInfo.nickName}}</view>
+      <view class="extra">欢迎您使用【xxx】小程序</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="btn-box">
+      <button open-type="getUserInfo" class="weui-btn weui-btn_default btn" bindgetuserinfo="getUserInfo">获取头像</button>
+    </view>
+  </block>
+</view>
+<view class="container">
+  <view class="menus">
+    <view class="menu" bindtap="toBasicInfo">
+      <view class="image">
+        <image src="./images/info.png" alt></image>
+      </view>
+      <view class="title">基本信息
+        <text class="extra"></text>
+      </view>
+      <image class="icon_right" src="../../images/right.png" alt></image>
+    </view>
+    <view class="menu" bindtap="about">
+      <view class="image">
+        <image src="./images/about.png" alt></image>
+      </view>
+      <view class="title">关于作者
+        <text class="extra"></text>
+      </view>
+      <image class="icon_right" src="../../images/right.png" alt></image>
+    </view>
+  </view>
+</view>

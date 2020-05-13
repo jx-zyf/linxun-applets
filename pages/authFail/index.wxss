@@ -1,3 +1,5 @@
+/* pages/authFail/index.wxss */
+
 page {
   height: 100%;
 }
@@ -5,26 +7,6 @@ page {
 .container {
   background-color: #f0eff4;
   height: 100%;
-}
-
-.save-btn, .cancel-btn {
-  width: 690rpx;
-  height: 80rpx;
-  line-height: 80rpx;
-  text-align: center;
-  margin-top: 30rpx;
-  border-radius: 6rpx;
-  box-sizing: border-box;
-}
-
-.save-btn {
-  background-color: #1aad19;
-  color: #fff;
-}
-
-button[type="default"] {
-  background-color: #fff;
-  color: #000;
 }
 
 .authFail image {

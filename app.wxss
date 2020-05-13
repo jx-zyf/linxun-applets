@@ -2,5 +2,11 @@
 @import 'style/weui.wxss';
 
 page {
-  --primaryColor: #1296db;
+  --primaryColor: #07c160;
+  font-size: 32rpx;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 36rpx 20rpx;
 }

@@ -1,0 +1,24 @@
+<!--pages/basicInfo/index.wxml-->
+<view class="container">
+  <view class="info-box img-box">
+    <view class="info">
+      <text>头像</text>
+      <view class="img">
+        <image src="{{userInfo.avatarUrl || './images/user.png'}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="info-box">
+    <view class="info">
+      <text>昵称</text>
+      <text>{{userInfo.nickName || '暂未获取'}}</text>
+    </view>
+    <view class="info">
+      <text>性别</text>
+      <text>{{userInfo.gender === 1 ? '男' : userInfo.gender === 2 ? '女' : '未知'}}</text>
+    </view>
+  </view>
+  <view class="option" wx:if="{{!userInfo.nickName}}">
+    <button open-type="getUserInfo" class="weui-btn weui-btn_primary btn" bindgetuserinfo="getUserInfo">获取微信头像与昵称</button>
+  </view>
+</view>

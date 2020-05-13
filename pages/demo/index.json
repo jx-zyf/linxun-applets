@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "linxun-userinfo": "../../components/linxun-userinfo/index",
-    "linxun-idcard-input": "../../components/linxun-idcard-input/index",
-    "linxun-phone-input": "../../components/linxun-phone-input/index",
-    "linxun-common-input": "../../components/linxun-common-input/index"
-  }
-}

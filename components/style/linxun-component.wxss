@@ -1,52 +1,29 @@
+@import '../../style/weui.wxss';
 
 .linxun-input-box {
-  display: flex;
-  margin: 32rpx 16rpx 44rpx 16rpx;
+  margin: 0 12rpx 24rpx 12rpx;
   padding: 12rpx;
   font-size: 32rpx;
-  border-bottom: 1rpx solid #ccc;
-  height: 60rpx;
-  line-height: 60rpx;
+  border-bottom: 1rpx solid #eee;
   position: relative;
 }
 
-.linxun-upload {
-  height: 120rpx;
-  line-height: 120rpx;
-}
-
 .linxun-input-label {
+  display: inline-block;
+  width: 100%;
   height: 100%;
-  flex: 3;
+  padding: 12rpx 0;
 }
 
-.linxun-right {
+.linxun-value {
   height: 100%;
-  flex: 6;
   display: flex;
   align-items: center;
+  padding-top: 12rpx;
 }
 
 .linxun-input {
   flex: 6;
-}
-
-.linxun-img-box {
-  flex: 1;
-  text-align:right;
-  display: flex;
-  align-items: center;
-}
-
-.linxun-get-phone {
-  flex: 2;
-  margin-top: 0;
-  padding: 0 16rpx !important;
-}
-
-.linxun-img-box-img {
-  width: 56rpx;
-  height: 56rpx;
 }
 
 .linxun-red {
@@ -60,7 +37,7 @@
 .linxun-error-msg {
   position: absolute;
   top: 100%;
-  left: 33.4%;
+  left: 16rpx;
   width: 100%;
   color: red;
   font-size: 24rpx;

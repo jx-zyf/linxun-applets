@@ -1,0 +1,15 @@
+.box {
+  overflow: hidden;
+}
+
+.tips {
+  text-align: center;
+  font-size: 32rpx;
+  color: #333;
+  padding: 24rpx 0;
+  background: rgba(0, 0, 0, .1);
+}
+
+.submit {
+  padding: 60rpx 32rpx;
+}

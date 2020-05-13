@@ -1,0 +1,29 @@
+/* components/image-upload/index.wxss */
+
+@import '../style/linxun-component.wxss';
+
+.weui-uploader__bd {
+  overflow: visible;
+}
+
+.weui-uploader__file {
+  position: relative;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.delete {
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+  width: 48rpx;
+  height: 48rpx;
+  z-index: 2;
+}
+
+.my-img {
+  margin: auto;
+  max-width: 88%;
+  max-height: 88%;
+}

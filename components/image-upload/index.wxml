@@ -1,0 +1,21 @@
+<!--components/image-upload/index.wxml-->
+<view class="linxun-input-box">
+  <view class="linxun-input-label">
+    <text class="{{rule.required ? 'linxun-red' : 'linxun-placeholder'}}">*</text> {{rule.label}}
+    <view class="weui-uploader__info" style="float: right;">{{curImgs.length}}/{{rule.count || 1}}</view>
+  </view>
+  <view class="linxun-value">
+    <view class="weui-cell__bd">
+      <view class="weui-uploader__files">
+        <view wx:for="{{curImgs}}" wx:key="*this" class="weui-uploader__file" id="{{item}}" bindtap="_previewMultipleImage">
+          <image class="weui-uploader__img my-img" src="{{item}}" mode="aspectFill" />
+          <image class="delete" src="./images/delete.png" data-index="{{index}}" catchtap="_deleteImage"></image>
+        </view>
+      </view>
+      <view wx:if="{{curImgs.length < (rule.count || 1)}}" class="weui-uploader__input-box my-img">
+        <view class="weui-uploader__input" bindtap="_chooseImage"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="weui-uploader__info">{{tips}}</view>

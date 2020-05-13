@@ -1,0 +1,22 @@
+<!--components/linxun-idcard-input/index.wxml-->
+<view class="linxun-input-box">
+	<label class="linxun-input-label">
+		<text class="linxun-red">*</text> 证件类型</label>
+	<view class="linxun-value">
+		<picker class="linxun-picker {{selectIndex != -1 ? '' : 'textPlaceholder'}}" bindchange="_onPickerChange" range-key="label" value="{{selectIndex}}" range="{{typeConfig}}">
+			{{typeConfig[selectIndex].label || '请选择'}}
+			<text>请选择</text>
+		</picker>
+	</view>
+</view>
+<view class="linxun-input-box">
+	<label class="linxun-input-label">
+		<text class="{{rule.required ? 'linxun-red' : 'linxun-placeholder'}}">*</text> 证件号</label>
+	<view class="linxun-value">
+		<input class="linxun-input" type="{{selectIndex == 0 ? 'idcard' : 'text'}}" placeholder="请输入身份证号" bindinput="_onInputChange" bindblur="_onInputBlur" value="{{idCard}}"></input>
+		<view class="linxun-img-box" wx:if="{{rule.useImg}}">
+			<image class="linxun-img-box-img" src="./images/camera.png" bindtap="_chooseImage"></image>
+		</view>
+	</view>
+	<view class="linxun-error-msg">{{errorMsg}}</view>
+</view>

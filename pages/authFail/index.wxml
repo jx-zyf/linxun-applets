@@ -1,8 +1,9 @@
+<!--pages/authFail/index.wxml-->
 <view class="container">
   <view class="authFail">
     <image src="./images/authFail.png"></image>
   </view>
   <view>
-    <button bindtap="toAuthorize" class="save-btn">重新授权</button>
+    <button bindtap="toAuthorize" class="weui-btn weui-btn_primary">重新授权</button>
   </view>
 </view>

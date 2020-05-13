@@ -1,0 +1,12 @@
+<!--components/common-picker/index.wxml-->
+<view class="linxun-input-box">
+	<label class="linxun-input-label">
+		<text class="{{rule.required ? 'linxun-red' : 'linxun-placeholder'}}">*</text> {{rule.label}}</label>
+	<view class="linxun-value">
+		<picker class="linxun-picker {{selectIndex != -1 ? '' : 'textPlaceholder'}}" range-key="{{rule.rangeKey || 'label'}}" bindchange="_onPickerChange" value="{{selectIndex}}" range="{{rule.ranges}}">
+			{{rule.ranges[selectIndex][rule.rangeKey || 'label'] || '请选择'}}
+      <text>请选择</text>
+		</picker>
+	</view>
+	<view class="linxun-error-msg">{{errorMsg}}</view>
+</view>
