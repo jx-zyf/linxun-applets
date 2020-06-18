@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wux-cascader": "../../wuxComponents/cascader/index"
+  }
+}

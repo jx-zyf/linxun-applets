@@ -1,0 +1,14 @@
+<!--components/multi-picker/index.wxml-->
+<view class="linxun-input-box">
+	<wux-cascader visible="{{visible}}" default-value="{{selectValues}}" title="{{rule.label}}" options="{{rule.options}}" bind:close="_onClose" bind:change="_onPickerChange" />
+
+	<label class="linxun-input-label">
+		<text class="{{rule.required ? 'linxun-red' : 'linxun-placeholder'}}">*</text> {{rule.label}}</label>
+	<view class="linxun-value" bindtap="_onOpen">
+		<view class="linxun-picker {{selectValues.length > 0 ? '' : 'textPlaceholder'}}">
+			{{multiText || '请选择'}}
+			<text>请选择</text>
+		</view>
+	</view>
+	<view class="linxun-error-msg">{{errorMsg}}</view>
+</view>

@@ -5,6 +5,7 @@
     "phone-input": "../../components/phone-input/index",
     "common-input": "../../components/common-input/index",
     "common-picker": "../../components/common-picker/index",
-    "image-upload": "../../components/image-upload/index"
+    "image-upload": "../../components/image-upload/index",
+    "multi-picker": "../../components/multi-picker/index"
   }
 }

@@ -45,6 +45,65 @@ Page({
       sourceType: ['camera']
     },
     faceUrls: [],
+    multiPickerRule: {
+      name: 'multiPicker',
+      label: '级联选择',
+      required: true,
+      level: 3,   // 层级，防止未完全选择
+      options: [{
+        label: '广东省',
+        value: '1',
+        children: [{
+          label: '深圳市',
+          value: '1-1',
+          children: [{
+            label: '南山区',
+            value: '1-1-1',
+          }, {
+            label: '宝安区',
+            value: '1-1-2',
+          }, {
+            label: '龙华区',
+            value: '1-1-3',
+          }]
+        }, {
+          label: '广州市',
+          value: '1-2',
+          children: [{
+            label: '天河区',
+            value: '1-2-1',
+          }, {
+            label: '番禺区',
+            value: '1-2-2',
+          }]
+        }]
+      }, {
+        label: '江西省',
+        value: '2',
+        children: [{
+          label: '南昌市',
+          value: '2-1',
+          children: [{
+            label: '青山湖区',
+            value: '2-1-1',
+          }, {
+            label: '进贤县',
+            value: '2-1-2',
+          }]
+        }, {
+          label: '赣州市',
+          value: '2-2',
+          children: [{
+            label: '章贡区',
+            value: '2-2-1',
+          }, {
+            label: '南康区',
+            value: '2-2-2',
+          }]
+        }]
+      }]
+    },
+    selectMultiPickerValue: [],
   },
 
   onLoad: function() {
@@ -79,7 +138,12 @@ Page({
   },
 
   submit: function () {
-    const { formData, selectPickerIndex, faceUrls } = this.data;
-    console.log(formData, selectPickerIndex, faceUrls);
+    const { 
+      formData, 
+      selectPickerIndex, 
+      faceUrls, 
+      selectMultiPickerValue 
+    } = this.data;
+    console.log(formData, selectPickerIndex, faceUrls, selectMultiPickerValue);
   }
 })

@@ -12,6 +12,8 @@
 		<common-picker rule="{{pickerRule}}" bind:pickerChange="onPickerComponentChange" data-field="selectPickerIndex"></common-picker>
 
 		<image-upload rule="{{imageRule}}" bind:imageChange="onImageChange" data-field="{{imageRule.name}}"></image-upload>
+
+		<multi-picker rule="{{multiPickerRule}}" bind:multiPickerChange="onPickerComponentChange" data-field="selectMultiPickerValue"></multi-picker>
 	</view>
 	<view class="submit">
 		<button bindtap="submit" class="weui-btn weui-btn_primary">提交</button>
