@@ -43,10 +43,10 @@
 │  ├─-multi-picker              # 级联选择（多列选择器）
 │  ├─style                      # 自定义组件公用样式
 │  └─utils                      # 自定义组件工具库
-    ├─constant.js               # 常量配置文件
-    ├─reg.js                    # 常用正则表达式
-    ├─mapConvertor.js           # 经纬度格式转换
-    └─util.js                   # 常用工具函数                   
+│   ├─constant.js               # 常量配置文件
+│   ├─reg.js                    # 常用正则表达式
+│   ├─mapConvertor.js           # 经纬度格式转换
+│   └─util.js                   # 常用工具函数                   
 ├─pages
 │  ├─authFail                   # 重新授权页
 │  └─home                       # 组件使用demo页
