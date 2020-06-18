@@ -40,6 +40,7 @@
 │  ├─-idcard-input              # 身份证输入框
 │  ├─-phone-input               # 手机号输入框
 │  ├─-image-upload              # 图片上传
+│  ├─-multi-picker              # 级联选择（多列选择器）
 │  ├─style                      # 自定义组件公用样式
 │  └─utils                      # 自定义组件工具库
     ├─constant.js               # 常量配置文件
